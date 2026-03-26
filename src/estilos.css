@@ -1,0 +1,264 @@
+/* =========================================
+   ESTILOS GENERALES Y TEXTOS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+body {
+    /* Cambiamos la fuente a una más amigable y redondeada */
+    font-family: 'Nunito', 'Segoe UI', Tahoma, sans-serif;
+    /* Un degradado de fondo más vivo y dulce */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ffeaf6 100%);
+    color: #2d3436;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.titulo-principal {
+    color: #ff4757;
+    /* Un rojo frambuesa muy llamativo */
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.subtitulo-autor {
+    color: #57606f;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #ffffff;
+    padding: 5px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+.caja-formulario {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    /* Bordes mucho más redondeados */
+    /* Sombra suave y amplia para que parezca que flota */
+    box-shadow: 0 15px 35px rgba(255, 111, 145, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 40px;
+    border-top: 5px solid #ff4757;
+    /* Detalle de color en la parte superior */
+}
+
+.grupo-formulario {
+    margin-bottom: 25px;
+}
+
+.etiqueta-formulario {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    color: #2f3542;
+    font-size: 0.95rem;
+}
+
+.entrada-datos {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f1f2f6;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.entrada-datos:focus {
+    border-color: #ff4757;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 71, 87, 0.1);
+    outline: none;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    /* Botones tipo píldora */
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.boton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.boton-guardar {
+    background: linear-gradient(135deg, #ff6b81 0%, #ff4757 100%);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.boton-guardar:hover {
+    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+    box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3);
+    transform: translateY(-2px);
+}
+
+.boton-enlace-bd {
+    background: linear-gradient(135deg, #7bed9f 0%, #2ed573 100%);
+    color: white;
+}
+
+.boton-enlace-bd:hover {
+    box-shadow: 0 8px 20px rgba(46, 213, 115, 0.3);
+    transform: translateY(-2px);
+}
+
+.boton-enlace-csv {
+    background: linear-gradient(135deg, #70a1ff 0%, #1e90ff 100%);
+    color: white;
+}
+
+.boton-enlace-csv:hover {
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.boton-volver {
+    background-color: #ffffff;
+    color: #57606f;
+    margin-bottom: 30px;
+    align-self: flex-start;
+    border: 2px solid #dfe4ea;
+    box-shadow: none;
+}
+
+.boton-volver:hover {
+    border-color: #a4b0be;
+    color: #2f3542;
+}
+
+.boton-eliminar {
+    background-color: #ff6b81;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.boton-eliminar:hover {
+    background-color: #ff4757;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Por si la pantalla es pequeña, que bajen en vez de aplastarse */
+}
+
+/* =========================================
+   TABLAS DE DATOS
+   ========================================= */
+.tabla-chucherias {
+    width: 100%;
+    max-width: 900px;
+    border-collapse: separate;
+    /* Necesario para que el border-radius funcione bien */
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.tabla-chucherias th,
+.tabla-chucherias td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f1f2f6;
+}
+
+.tabla-chucherias th {
+    background-color: #2f3542;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Redondear las esquinas de la cabecera de la tabla */
+.tabla-chucherias th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.tabla-chucherias th:last-child {
+    border-top-right-radius: 15px;
+}
+
+/* Efecto cebra suave y hover */
+.tabla-chucherias tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.tabla-chucherias tr:hover {
+    background-color: #fff0f3;
+    transition: background-color 0.2s;
+}
+
+.tabla-chucherias tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   MENSAJES DEL PROCESADOR
+   ========================================= */
+.caja-mensaje {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 40px;
+    border-top: 5px solid #2ed573;
+}
+
+.texto-exito {
+    color: #2ed573;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.texto-error {
+    color: #ff4757;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 0;
+}
